@@ -1,6 +1,7 @@
 const express = require("express");
 const { graphqlHTTP } = require("express-graphql");
 const { buildSchema } = require("graphql");
+const cors = require( `cors` );
 
 const mainMenu = [
   { name: "Projects", url: "#", title: "Test" },
@@ -68,6 +69,7 @@ const root = {
 };
 
 const app = express();
+app.use(cors());
 app.use(
   "/graphql",
   graphqlHTTP({
@@ -80,5 +82,5 @@ app.use(
 const port = 4000;
 
 app.listen(port, () => {
-  console.log(`GraphQL is running at http://localhost:${port}`)
+  console.log(`GraphQL is running at http://localhost:${port}`);
 });

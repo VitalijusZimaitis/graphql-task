@@ -1,0 +1,28 @@
+.nav {
+  max-width: 1350px;
+  margin: 0 auto;
+
+  ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    li {
+      a {
+        padding: 15px 25px;
+        font: normal normal bold 16px/21px Roboto;
+        letter-spacing: 0.24px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        text-decoration: none;
+        opacity: 1;
+        transition: 150ms;
+
+        &:hover {
+          color: #FAD32F;
+        }
+      }
+    }
+  }
+}

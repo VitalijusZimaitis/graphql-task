@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useQuery } from "@apollo/client";
+import { TPageContentEntity } from "./types/PageData";
+import { GET_PAGE_CONTENT } from "./queries/PageData";
+import PageLayout from "./components/Layout/PageLayout";
+
+type TQueryPageData = {
+  pageContent: TPageContentEntity;
+};
 
 function App() {
+  const { loading, data } = useQuery<TQueryPageData>(GET_PAGE_CONTENT);
+
+  if (loading) {
+    return <>Loading...</>;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PageLayout>
+      <h2>{data?.pageContent.title}</h2>
+      <p>{data?.pageContent.content}</p>
+    </PageLayout>
   );
 }
 
