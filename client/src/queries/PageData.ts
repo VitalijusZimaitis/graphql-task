@@ -1,5 +1,17 @@
 import { gql } from "@apollo/client";
 
+export const GET_FOOTER_CONTENT = gql`
+  query {
+    navigation {
+      footerMenu {
+        name
+        url
+        title
+      }
+      footerContent
+    }
+  }
+`;
 export const GET_INFO_BLOCK_CONTENT = gql`
   query {
     pageContent {

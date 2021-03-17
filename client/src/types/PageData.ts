@@ -15,4 +15,5 @@ export type TNavLinkEntity = {
 export type TNavigationEntity = {
   mainMenu: Array<TNavLinkEntity>;
   footerMenu: Array<TNavLinkEntity>;
+  footerContent: string;
 };

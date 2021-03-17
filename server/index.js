@@ -1,7 +1,7 @@
 const express = require("express");
 const { graphqlHTTP } = require("express-graphql");
 const { buildSchema } = require("graphql");
-const cors = require( `cors` );
+const cors = require(`cors`);
 
 const mainMenu = [
   { name: "Projects", url: "#", title: "Test" },
@@ -30,9 +30,10 @@ const pageContent = {
     "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam.",
     "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam.",
   ],
-  footerContent:
-    "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.",
 };
+
+const footerContent =
+  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.";
 
 const schema = buildSchema(`
   type NavLink {
@@ -43,6 +44,7 @@ const schema = buildSchema(`
   type Menu {
     mainMenu: [NavLink]
     footerMenu: [NavLink]
+    footerContent: String
   }
   type PageData {
     title: String!
@@ -50,7 +52,6 @@ const schema = buildSchema(`
     formTitle: String!
     formIntro: String!
     infoBlock: [String]
-    footerContent: String
   }
   type Query {
     pageContent: PageData
@@ -64,6 +65,7 @@ const root = {
     return {
       mainMenu: mainMenu,
       footerMenu: footerMenu,
+      footerContent: footerContent
     };
   },
 };
