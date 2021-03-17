@@ -1,9 +1,10 @@
 import React from "react";
 import PageLayout from "./modules/Layout/PageLayout";
 import FormContent from "./modules/Form/FormContent";
+import Content from "./modules/Content/Content";
+import InfoBlock from "./modules/InfoBlock/InfoBlock";
 
 import "./App.styles.scss";
-import Content from "./modules/Content/Content";
 
 export const App = () => {
   return (
@@ -15,9 +16,12 @@ export const App = () => {
         <div className="form-content">
           <FormContent />
         </div>
+        <div className="info-block">
+          <InfoBlock />
+        </div>
       </section>
     </PageLayout>
   );
-}
+};
 
 export default App;

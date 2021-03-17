@@ -1,5 +1,13 @@
 import { gql } from "@apollo/client";
 
+export const GET_INFO_BLOCK_CONTENT = gql`
+  query {
+    pageContent {
+      infoBlock
+    }
+  }
+`;
+
 export const GET_FORM_CONTENT = gql`
   query {
     pageContent {

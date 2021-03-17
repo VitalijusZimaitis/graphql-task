@@ -17,6 +17,11 @@
     flex: 0 1 100%;
   }
 
+  .info-block {
+    margin: 50px 15px;
+    flex: 0 1 100%;
+  }
+
   @include desktop {
     .page-content {
       margin: 0 15px;

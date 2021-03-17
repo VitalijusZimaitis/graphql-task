@@ -3,7 +3,7 @@ export type TPageContentEntity = {
   content: string;
   formIntro: string;
   formTitle: string;
-  infoBlock: string;
+  infoBlock: Array<string>;
 };
 
 export type TNavLinkEntity = {
