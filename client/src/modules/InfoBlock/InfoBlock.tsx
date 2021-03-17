@@ -15,8 +15,12 @@ const InfoBlock: React.FC = (): JSX.Element => {
   return (
     <Block variant="secondary">
       <div className="info-block--container">
-        {data?.pageContent.infoBlock.map((message) => {
-          return <div className="info-block--message">{message}</div>;
+        {data?.pageContent.infoBlock.map((message, index) => {
+          return (
+            <div key={index} className="info-block--message">
+              {message}
+            </div>
+          );
         })}
       </div>
     </Block>

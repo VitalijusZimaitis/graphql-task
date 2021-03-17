@@ -17,7 +17,7 @@ const Navbar: React.FC = (): JSX.Element => {
       <ul>
         {data?.navigation?.mainMenu?.map((menuItem) => {
           return (
-            <li>
+            <li key={menuItem.name}>
               <a title={menuItem.title} href={menuItem.url}>{menuItem.name}</a>
             </li>
           );
