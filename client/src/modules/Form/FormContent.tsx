@@ -34,8 +34,7 @@ const FormContent: React.FC = (): JSX.Element => {
         />
         <Textarea
           label={"Your message"}
-          type={"text"}
-          name={"last_name"}
+          name={"message"}
           placeholder={"Type your message here"}
           rows={8}
         />
