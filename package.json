@@ -5,7 +5,7 @@
   "author": "Vitalijus Zimaitis <vz@frontit.dk>",
   "license": "MIT",
   "scripts": {
-    "start-server": "cd ./server && node index.js",
-    "start-client": "cd ./client && yarn start"
+    "start-server": "cd ./server && yarn install && node index.js",
+    "start-client": "cd ./client && yarn install && yarn start"
   }
 }
