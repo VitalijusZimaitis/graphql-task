@@ -1,0 +1,20 @@
+.btn {
+  width: 100%;
+  border: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &.btn-primary {
+    background: #fad32f 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: 1;
+    color: black;
+    text-align: center;
+
+    &:hover {
+      background: darken(#fad32f, 15%);
+    }
+  }
+}

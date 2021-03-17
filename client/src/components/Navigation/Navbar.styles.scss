@@ -1,6 +1,6 @@
 .nav {
-  max-width: 1350px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
 
   ul {
     list-style: none;
@@ -9,18 +9,23 @@
     padding: 0;
 
     li {
+      &:last-of-type {
+        a {
+          margin-right: 0;
+        }
+      }
       a {
-        padding: 15px 25px;
         font: normal normal bold 16px/21px Roboto;
         letter-spacing: 0.24px;
-        color: #FFFFFF;
+        color: #ffffff;
         text-transform: uppercase;
         text-decoration: none;
         opacity: 1;
         transition: 150ms;
+        margin: 0 25px;
 
         &:hover {
-          color: #FAD32F;
+          color: #fad32f;
         }
       }
     }

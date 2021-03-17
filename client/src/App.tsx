@@ -1,24 +1,21 @@
 import React from "react";
-import { useQuery } from "@apollo/client";
-import { TPageContentEntity } from "./types/PageData";
-import { GET_PAGE_CONTENT } from "./queries/PageData";
 import PageLayout from "./components/Layout/PageLayout";
+import FormContent from "./components/Form/FormContent";
 
-type TQueryPageData = {
-  pageContent: TPageContentEntity;
-};
+import "./App.styles.scss";
+import Content from "./components/Content/Content";
 
-function App() {
-  const { loading, data } = useQuery<TQueryPageData>(GET_PAGE_CONTENT);
-
-  if (loading) {
-    return <>Loading...</>;
-  }
-
+export const App = () => {
   return (
     <PageLayout>
-      <h2>{data?.pageContent.title}</h2>
-      <p>{data?.pageContent.content}</p>
+      <section className="page-content--container">
+        <div className="page-content">
+          <Content />
+        </div>
+        <div className="form-content">
+          <FormContent />
+        </div>
+      </section>
     </PageLayout>
   );
 }

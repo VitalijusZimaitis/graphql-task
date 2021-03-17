@@ -7,7 +7,9 @@ const PageLayout: React.FC = ({ children }): JSX.Element => {
   return (
     <>
       <Header />
-      <div className="container">{children}</div>
+      <div className="container">
+          {children}
+      </div>
     </>
   );
 };
