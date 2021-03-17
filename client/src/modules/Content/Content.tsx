@@ -2,7 +2,7 @@ import * as React from "react";
 import { useQuery } from "@apollo/client";
 import { GET_PAGE_CONTENT } from "../../queries/PageData";
 import { TPageContentEntity } from "../../types/PageData";
-import Block from "../Block/Block";
+import Block from "../../components/Block/Block";
 
 import "./Content.styles.scss";
 

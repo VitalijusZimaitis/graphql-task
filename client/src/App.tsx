@@ -1,9 +1,9 @@
 import React from "react";
-import PageLayout from "./components/Layout/PageLayout";
-import FormContent from "./components/Form/FormContent";
+import PageLayout from "./modules/Layout/PageLayout";
+import FormContent from "./modules/Form/FormContent";
 
 import "./App.styles.scss";
-import Content from "./components/Content/Content";
+import Content from "./modules/Content/Content";
 
 export const App = () => {
   return (

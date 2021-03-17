@@ -2,10 +2,10 @@ import * as React from "react";
 import { useQuery } from "@apollo/client";
 import { GET_FORM_CONTENT } from "../../queries/PageData";
 import { TPageContentEntity } from "../../types/PageData";
-import Block from "../Block/Block";
-import Input from "../FormElement/Input/Input";
-import Textarea from "../FormElement/Textarea/Textarea";
-import Button from "../Button/Button";
+import Block from "../../components/Block/Block";
+import Input from "../../components/FormElement/Input/Input";
+import Textarea from "../../components/FormElement/Textarea/Textarea";
+import Button from "../../components/Button/Button";
 
 import "./FormContent.styles.scss";
 
