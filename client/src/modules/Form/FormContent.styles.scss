@@ -1,7 +1,7 @@
 .form-content {
   &--title {
     text-align: left;
-    font: normal normal bold 20px/26px Roboto;
+    font-size: 20px;
     letter-spacing: 0.3px;
     color: #000000;
     opacity: 1;
@@ -20,7 +20,7 @@
   }
 
   &--description {
-    font: normal normal normal 14px/20px Roboto;
+    font-size: 14px;
     letter-spacing: 0.21px;
     color: #000000;
     opacity: 1;
