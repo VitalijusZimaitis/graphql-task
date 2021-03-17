@@ -1,14 +1,30 @@
+@import "../../assets/scss/mixins";
+
 .nav {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
 
   ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
+
+    @include desktop {
+      flex-wrap: nowrap;
+    }
 
     li {
+      flex-basis: 100%;
+      padding: 10px 0;
+
+      @include desktop {
+        flex-basis: auto;
+        padding: 0;
+      }
+
       &:last-of-type {
         a {
           margin-right: 0;
@@ -22,12 +38,39 @@
         text-decoration: none;
         opacity: 1;
         transition: 150ms;
-        margin: 0 25px;
+        margin: 0;
+
+        @include desktop {
+          margin: 0 25px;
+        }
 
         &:hover {
           color: #fad32f;
         }
       }
     }
+  }
+}
+
+.menu-desktop {
+  display: none;
+
+  @include desktop {
+    display: flex;
+  }
+}
+
+.menu-mobile {
+  display: flex;
+
+  &--button {
+    background: transparent;
+    border: 0;
+    color: white;
+    outline: none;
+  }
+
+  @include desktop {
+    display: none;
   }
 }

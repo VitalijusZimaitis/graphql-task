@@ -1,10 +1,16 @@
+@import "../../assets/scss/mixins";
+
 .footer-block {
   background-color: #4619ac;
   margin: 0;
-  padding: 25px 0;
+  padding: 25px 20px;
+
+  @include desktop {
+    padding: 25px 0;
+  }
 
   p {
-    color: #FFFFFFBF;
+    color: #ffffffbf;
   }
 
   &--container {
@@ -13,15 +19,27 @@
   }
 
   .footer-menu {
-    margin: 0;
+    margin: 0 0 0 20px;
     padding: 0;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+
+    @include desktop {
+      margin: 0;
+    }
 
     li {
-      &:not(:first-of-type) {
-        padding-left: 5px;
-        list-style-image: url("../../assets/images/menu-item-icon.png");
+      padding-left: 5px;
+      list-style-image: url("../../assets/images/menu-item-icon.png");
+      flex-basis: 45%;
+
+      @include desktop {
+        flex-basis: auto;
+
+        &:first-of-type {
+          list-style-image: none;
+        }
       }
       a {
         color: white;
