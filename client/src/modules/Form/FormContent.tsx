@@ -33,10 +33,10 @@ const FormContent: React.FC = (): JSX.Element => {
           placeholder={"Your last name here"}
         />
         <Textarea
-          label={"Last name"}
+          label={"Your message"}
           type={"text"}
           name={"last_name"}
-          placeholder={"Your last name here"}
+          placeholder={"Type your message here"}
           rows={8}
         />
         <Button variant="primary" type="submit">SUBMIT</Button>
